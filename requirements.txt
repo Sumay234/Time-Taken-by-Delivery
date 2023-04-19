@@ -1,3 +1,5 @@
 pymongo
+numpy
 pandas
-json
+-e . ## -e indicate the setup file and . refer to current diractory
+
