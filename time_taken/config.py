@@ -9,7 +9,7 @@ from dataclasses import dataclass
 
 @dataclass
 class EnvironmentVariable:
-    mongo_db_url:str = os.getenv("MONGO_DB_URL")
+    mongo_db_url:str = os.getenv("MONGO_DB_PATH")
     
 
 env_var = EnvironmentError()
