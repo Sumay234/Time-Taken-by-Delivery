@@ -9,3 +9,8 @@ In Python, setup.py is a module used to build and distribute Python packages. It
 ```
 It will collect all the information from the project file and store all data in the meta-data.
 ```
+
+### What is sys used for in Python?
+```
+The python sys module contains methods and variables for modifying many elements of the Python Runtime Environment. It allows us to access parameters and functionalities specific to the system.
+```
