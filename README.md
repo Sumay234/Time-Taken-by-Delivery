@@ -14,3 +14,7 @@ It will collect all the information from the project file and store all data in 
 ```
 The python sys module contains methods and variables for modifying many elements of the Python Runtime Environment. It allows us to access parameters and functionalities specific to the system.
 ```
+### What is artifact folder?
+```
+Artifact file generate output and Save in artifact folder.
+```

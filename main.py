@@ -3,6 +3,8 @@ from time_taken.exception import deliveryexception
 from time_taken.utils import get_collection_as_dataframe
 
 from time_taken.config import EnvironmentVariable
+from time_taken.entity.config_entity import DataIngestionConfig
+from time_taken.entity import config_entity
 
 import os
 import sys
@@ -21,7 +23,11 @@ import sys
 if __name__ == "__main__":
     try:
         #test_logger_and_exception()
-        get_collection_as_dataframe(database_name="DELIVERY_TIMETAKEN",collection_name="DELIVERY_TIMETAKEN_PROJECT")
+        #get_collection_as_dataframe(database_name="DELIVERY_TIMETAKEN",collection_name="DELIVERY_TIMETAKEN_PROJECT")
+        training_pipeline_config = config_entity.TrainingPipelineConfig()
+        data_ingestion_config = config_entity.DataIngestionConfig(training_pipeline_config = training_pipeline_config)
+        print(data_ingestion_config.to_dict)
+        
     except Exception as e:
         print(e)
         

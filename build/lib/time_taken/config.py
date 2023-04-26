@@ -9,11 +9,11 @@ from dataclasses import dataclass
 
 @dataclass
 class EnvironmentVariable:
-    mongo_db_url = os.getenv("MONGO_DB_URL")
-    
+    mongo_db_url:str = os.getenv("MONGO_DB_PATH")
+    #mongo_db_url:str = os.getenv("mongodb+srv://sumaykumar369:12345@cluster1.qmvcnwu.mongodb.net/?retryWrites=true&w=majority")
 
 env_var = EnvironmentError()
-mongo_client = pymongo.MongoClient(env_var,mongo_db_url)
+mongo_client = pymongo.MongoClient("mongodb+srv://sumaykumar369:12345@cluster1.qmvcnwu.mongodb.net/?retryWrites=true&w=majority")
 TARGET_COLUMN = "Time_taken(min)"
 
-print("env_var","mongo_db_url")
+

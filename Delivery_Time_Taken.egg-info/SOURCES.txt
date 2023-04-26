@@ -11,6 +11,8 @@ time_taken/predictor.py
 time_taken/utils.py
 time_taken/components/__init__.py
 time_taken/entity/__init__.py
+time_taken/entity/artifact_entity.py
+time_taken/entity/config_entity.py
 time_taken/exception/__init__.py
 time_taken/logger/__init__.py
 time_taken/pipeline/__init__.py

@@ -6,11 +6,11 @@ import sys
 
 from time_taken.logger import logging
 from time_taken.exception import deliveryexception
-from time_taken.config import mongo_client
+from time_taken.config import EnvironmentVariable
 
 
 ## To read data from the database MongoDB
-def get_collection_as_dataframe(database_name:str,collection_name:str):
+def get_collection_as_dataframe(database_name:str,collection_name:str)->pd.DataFrame:
     try:
         logging.info(f"Reading data from databas : {database_name} and collection name: {collection_name}")
         df = pd.DataFrame(mongo_client[database_name][collection_name].find())
